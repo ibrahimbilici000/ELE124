@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+// Function to calculate power
+int power(int base, int exp) {
+    int result = 1;
+    for (int i = 0; i < exp; i++) {
+        result *= base;
+    }
+    return result;
+}
+
+// Function to compute and print home value
+void computeHomeValue(void) {
+    int popularity, size;
+    printf("Enter the popularity of the neighborhood: ");
+    scanf("%d", &popularity);
+    printf("Enter the size of the house: ");
+    scanf("%d", &size);
+    
+    int homeValue = (power(popularity, 3) + power(size, 2)) * 10000;
+    printf("The estimated home value is: %d TL\n", homeValue);
+}
+
+int main() {
+    computeHomeValue();
+    return 0;
+}
