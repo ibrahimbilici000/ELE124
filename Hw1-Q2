@@ -20,3 +20,11 @@ int main( void )
    return 0; /* indicate that program ended successfully */
 
 } /* end function main */
+
+/*  START
+Enter first integer
+4
+Enter second integer
+5
+Sum is 9
+END  */
