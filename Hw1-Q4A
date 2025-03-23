@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <math.h>
+
+// Function prototype
+int computeHomeValue(int popularity, int size);
+
+int main() {
+    int popularity, size;
+
+    // Get user input
+    printf("Enter popularity: ");
+    scanf("%d", &popularity);
+
+    printf("Enter size: ");
+    scanf("%d", &size);
+
+    // Compute home value
+    int homeValue = computeHomeValue(popularity, size);
+
+    // Print the result
+    printf("Home value is: %d TL\n", homeValue);
+
+    return 0;
+}
+
+// Function to compute home value
+int computeHomeValue(int popularity, int size) {
+    return (pow(popularity, 3) + pow(size, 2)) * 10000;
+}
+/*  START
+Enter popularity: 5
+Enter size: 2
+Home value is: 1290000 TL
+END  */
